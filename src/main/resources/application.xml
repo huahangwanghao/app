@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+         xmlns:aop="http://www.springframework.org/schema/aop"  
+         xmlns:context="http://www.springframework.org/schema/context"  
+         xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                             http://www.springframework.org/schema/beans/spring-beans.xsd  
+                              http://www.springframework.org/schema/aop 
+                             http://www.springframework.org/schema/aop/spring-aop.xsd  
+                             http://www.springframework.org/schema/context 
+                             http://www.springframework.org/schema/context/spring-context.xsd"> 
+
+  <!--   <import resource="classpath*:rabbitMq.xml" /> -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+  <!-- 引入jdbc配置文件 -->
+  <context:property-placeholder location="classpath:jdbc.properties"/>
+  <!-- 扫描指定package下所有带有如@controller,@services,@resource,@ods并把所注释的注册为Spring Beans -->
+  <context:component-scan base-package="aop.service" />
+    <!--db-->
+  <import resource="spring-db.xml"></import>
+    <!--引入定时器-->
+    <import resource="spring_quartz.xml"/>
+    <!-- 激活annotation功能 -->
+    <context:annotation-config />
+    <!-- 激活annotation功能 -->
+    <context:spring-configured />
+    <!-- <bean id="product" class="com.wanghao.controller.Product" init-method="sendMessage"></bean> -->
+</beans>
