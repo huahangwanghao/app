@@ -27,8 +27,11 @@ public class TestServiceImpl implements TestService {
     public void insert() {
         XueSheng xueSheng=new XueSheng();
         xueSheng.setLaoshi_id(1);
-        xueSheng.setS_age(123);
+        xueSheng.setS_age(2);
         xueSheng.setS_name("adf");
-        xueShengMapper.insertSelective(xueSheng);
+       // xueShengMapper.insertSelective(xueSheng);
+        xueSheng.setS_id(3);
+        xueShengMapper.updateByPrimaryKeySelective(xueSheng);
+        int i=1/0;
     }
 }
