@@ -32,6 +32,6 @@ public class TestServiceImpl implements TestService {
        // xueShengMapper.insertSelective(xueSheng);
         xueSheng.setS_id(3);
         xueShengMapper.updateByPrimaryKeySelective(xueSheng);
-        int i=1/0;
+       // int i=1/0;
     }
 }
