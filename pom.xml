@@ -187,6 +187,16 @@
       <artifactId>aspectjweaver</artifactId>
       <version>1.7.4</version>
     </dependency>-->
+    
+    <!--dom4j-->
+	<dependency>
+	    <groupId>dom4j</groupId>
+	    <artifactId>dom4j</artifactId>
+	    <version>1.6.1</version>
+	</dependency>
+    
+    
+    
   </dependencies>
   <build>
     <finalName>app</finalName>
