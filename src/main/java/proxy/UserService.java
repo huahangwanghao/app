@@ -1,13 +1,13 @@
 package proxy; 
 /** 
 * @author WH 作者 E-mail: 
-* @version 创建时间：2017年3月24日 下午3:00:41 
+* @version 创建时间：2017年3月25日 下午4:05:26 
 * 类说明 
 */
 public interface UserService {
 
-    public void goFly();
+    void print();
     
-    public void stopFly(String name);
+    void print(String hello);
 }
  

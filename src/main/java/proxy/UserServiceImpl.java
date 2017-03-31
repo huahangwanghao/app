@@ -1,27 +1,20 @@
 package proxy; 
 /** 
 * @author WH 作者 E-mail: 
-* @version 创建时间：2017年3月24日 下午3:01:24 
+* @version 创建时间：2017年3月25日 下午4:06:10 
 * 类说明 
 */
 public class UserServiceImpl implements UserService {
 
     @Override
-    public void goFly() {
-       System.out.println("i can fly");
-
+    public void print() {
+        System.out.println("this is null args");
     }
 
     @Override
-    public void stopFly(String name) {
-        System.out.println("i can't fly");
-
+    public void print(String hello) {
+        System.out.println("this  args is"+hello);
     }
-    
-    public void eat(){
-        System.out.println("i can eat ");
-    }
-    
 
 }
  
